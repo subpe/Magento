@@ -19,13 +19,20 @@ Now you can collect payment via Bhartipay .
 Go to Store/Configuration/Sales/Payment Methods/Bhartipay
 
 Fill all the required details:
+
 1)Enable:yes
+
 2)Title:Bhartipay
+
 3)Merchant Id:Pay Id { Provided by Bhartipay }
+
 4)Merchant Key:Salt { Provided by Bhartipay }
+
 5)Custom Callback Url:no
+
 6)Transaction Url: For Test:https://uat.bhartipay.com/crm/jsp/paymentrequest
                  : For Live:https://merchant.bhartipay.com/crm/jsp/paymentrequest
 
 7)Industry Type Id: Name of your choice
+
 8)Website:Your website Name
