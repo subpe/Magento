@@ -1,0 +1,11 @@
+<?php
+
+?>
+<?php 
+	echo $this->getMethod()->getTitle() . '<br/>';
+	if ($this->getInfo()->getLastTransId() == '') {
+		// echo '<em>' . Mage::helper('bhartipay')->__('You will be redirected to Bhartipay Payment Gateway when you place an order.') . '</em>';
+	} else {
+		echo Mage::helper('bhartipay')->__('bhartipay Transaction ID: %s', $this->htmlEscape($this->getInfo()->getLastTransId())) . '<br/>';
+	}
+?>
