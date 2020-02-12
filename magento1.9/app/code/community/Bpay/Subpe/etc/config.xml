@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Bpay_subpe>
+            <version>0.1.0</version>
+        </Bpay_subpe>
+    </modules>
+    
+    
+    
+    <global>
+        <models>
+            <subpe>
+                <class>Bpay_subpe_Model</class>
+                <resourceModel>Bpay_subpe_mysql4</resourceModel>
+            </subpe>
+            <subpe_mysql4>
+                <class>Bpay_subpe_Model_Mysql4</class>
+                    <entities>
+                        <subpe>
+                            <table>subpe</table>
+                        </subpe>
+                    </entities>
+            </subpe_mysql4>
+        </models>
+        
+        
+        
+        
+        
+        <helpers>
+          <subpe>
+            <class>Bpay_subpe_Helper</class>
+          </subpe>
+        </helpers>
+        
+        
+        <resources>
+            <subpe_setup>
+                <setup>
+                    <module>Bpay_subpe</module>
+                    
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </subpe_setup>
+            <subpe_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </subpe_write>
+            <subpe_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </subpe_read>
+        </resources>
+        
+        
+        
+        <blocks>
+            <subpe><class>Bpay_subpe_Block</class></subpe>
+        </blocks>
+        
+        
+        
+    </global>
+    
+    
+    
+    
+    
+    
+    <frontend>
+        <secure_url>
+            <subpe_processing>/subpe/processing</subpe_processing>
+        </secure_url>
+        <routers>
+            <subpe>
+                <use>standard</use>
+                <args>
+                    <module>Bpay_subpe</module>
+                    <frontName>subpe</frontName>
+                </args>
+            </subpe>
+        </routers>
+        <layout>
+            <updates>
+                <subpe>
+                    <file>subpe.xml</file>
+                </subpe>
+            </updates>
+        </layout>
+    </frontend>
+    
+    
+    
+    
+    
+    <adminhtml>
+        <translate>
+            <modules>
+                <subpe>
+                    <files>
+                        <default>Bpay_subpe.csv</default>
+                    </files>
+                </subpe>
+            </modules>
+        </translate>
+    </adminhtml>
+    
+    
+    
+    <default>
+        <payment>        
+            <subpe_cc>
+                <active>0</active>
+                <model>subpe/cc</model>
+                <order_status>1</order_status>
+                <title>subpe PG</title>  
+                <inst_id></inst_id>
+                <inst_key></inst_key>
+                <custom_callbackurl>0</custom_callbackurl>
+                <callback_url></callback_url>
+                <transaction_url></transaction_url>
+                <transaction_status_url></transaction_status_url>
+                <website></website>
+                <industrytype></industrytype>
+                <promo_code_status>0</promo_code_status>
+                <promo_code_local_validation>0</promo_code_local_validation>
+                <promo_codes></promo_codes>
+            </subpe_cc>
+        </payment>
+    </default> 
+</config>

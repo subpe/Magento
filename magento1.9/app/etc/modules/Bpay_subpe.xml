@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Bpay_subpe>
+      <active>true</active>
+      <codePool>community</codePool>
+    </Bpay_subpe>
+  </modules>
+</config>

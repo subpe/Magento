@@ -1,0 +1,20 @@
+<?php
+
+?>
+<b><?php echo Mage::helper('subpe')->__('You will be redirected to Subpe Payment Gateway in a few seconds.'); ?></b>
+<form name="subpe_checkout" id="subpe_checkout" action="<?php echo $this->getFormAction();?>" method="POST">
+<?php $arr  = array();
+$arr = $this->getFormData();?>
+<?php if (is_array($arr)): ?>
+    <?php foreach ($arr as $name => $value): ?>
+        <input type="hidden" name="<?php echo $name; ?>" <?php if (!is_null($value)) { echo 'value="'. $value . '"'; } ?> />
+    <?php endforeach; ?>
+<?php endif; ?>
+</form>
+
+<script type="text/javascript">
+//<![CDATA[
+    var paymentform = document.getElementById('subpe_checkout');
+    window.onload = paymentform.submit();
+//]]>
+</script>

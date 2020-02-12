@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-  <modules>
-    <Bpay_bhartipay>
-      <active>true</active>
-      <codePool>community</codePool>
-    </Bpay_bhartipay>
-  </modules>
-</config>

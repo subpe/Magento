@@ -1,0 +1,11 @@
+<?php
+
+?>
+<?php 
+	echo $this->getMethod()->getTitle() . '<br/>';
+	if ($this->getInfo()->getLastTransId() == '') {
+		// echo '<em>' . Mage::helper('subpe')->__('You will be redirected to Subpe Payment Gateway when you place an order.') . '</em>';
+	} else {
+		echo Mage::helper('subpe')->__('subpe Transaction ID: %s', $this->htmlEscape($this->getInfo()->getLastTransId())) . '<br/>';
+	}
+?>
